@@ -63,7 +63,12 @@
         <number default="18" defaultValue="18" desc="The fastest it will move." dropdown="" fullname="Top Speed" hidden="false" id="11" name="topSpeed" order="2"/>
         <number default="0" defaultValue="0" desc="How quickly it loses speed when the key's let go." dropdown="" fullname="Slowdown Rate" hidden="false" id="12" name="decel" order="3"/>
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="moveRight" enabled="true" id="1" name="event-custom" order="1" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="checkInput" enabled="true" id="3" name="event-custom" order="3" repeats="true"/>
+            <event displayName="moveLeft" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_10_10_PositionLimiter" classname="scripts.Design_10_10_PositionLimiter" desc="Prevents it from going through the walls since it's a kinematic actor." description="Prevents it from going through the walls since it's a kinematic actor." design="true" drawOrder="0" id="10" name="Position Limiter" oid="-1" package="" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="2147483647"/>
@@ -73,5 +78,11 @@
     <snippet actorid="9" attachedevent="true" class="scripts.ActorEvents_9" classname="scripts.ActorEvents_9" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="11" name="ActorEvents_9" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
         <events/>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_1" classname="scripts.SceneEvents_1" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="12" name="SceneEvents_1" oid="-1" package="scripts." sceneid="1" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Any Key" enabled="true" id="1" name="event-key-any-press-release" order="1" repeats="true"/>
+        </events>
     </snippet>
 </pack>
